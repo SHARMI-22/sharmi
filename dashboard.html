@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+
+
+
+
+</head>
+
+<body>
+    <div id="cont">
+        <header>
+            <div class="box-main">
+                <div class="box1">
+                    <div class="menu">
+                        <div id="sideBar" class="sidebar">
+                            <img src="images/logo-2.svg" class="img" alt="">
+                            <div class="tab"><img src="images/icon_home.svg" alt=""><a href="">Home</a></div>
+                            <div class="tab"><img src="images/icon_dashboard.svg" alt=""><a href="">Dashboard</a></div>
+                            <div class="tab"><img src="images/icon_inbox.svg" alt=""><a href="">Inbox</a></span></div>
+                            <div class="tab"><img src="images/icon_products.png" alt=""><a href="">Products</a></div>
+                            <div class="tab"><img src="images/icon_admin.svg" alt=""><a href="">Admin</a></div>
+                        </div>
+                    </div>
+                    <i><img src="images/icon-burger-menu.svg" width="20px" onclick="toggle()" alt=""
+                            class="mainicon"></i>
+                    <img src="images/icon_search.svg" alt="logo">
+                    <p>Search transactions,invoices or help</p>
+                </div>
+                <div class="box2">
+                    <img src="images/notification.svg" alt="">
+                    <p>john Doe</p>
+                    <div class="navbutton">
+                        <img src="images/small-down.svg" class="menu1" alt="">
+
+                        <div class="dropdown-box">
+                            <div class="navbutton1">
+                                <img src="images/icon-my-profile.svg" alt="">
+                                <a href="#">My profile</a>
+                            </div>
+                            <div class="navbutton1">
+                                <img src="images/icon-billing.svg" alt="">
+                                <a href="#">Billing</a>
+                            </div>
+                            <div class="navbutton1">
+                                <img src="images/icon-logout.svg" alt="">
+                                <a href="#">Logout</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="images/Avatar.png" class="avatar" alt="">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main-cont">
+                <h2>Overview</h2>
+                <nav class="box">
+                    <button type="button">
+                        <p>AddFund</p>
+                        <img src="images/plus.svg" width="15px" alt="">
+                    </button>
+                </nav>
+            </div>
+
+            <div class="card">
+                <dic class="card1">
+                    <div class="card3">
+                        <div class="card4">
+                            <div class="center">
+                                <p>Statistics</p>
+                                <p>last 6 months</p>
+                            </div>
+
+
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+                            <canvas id="myChart" max-width="100%" height="270px"></canvas>
+                            <script>
+                                var xValues = ['jan', 'feb', 'mar', 'apr', 'may'];
+
+                                new Chart("myChart", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            data: [6000, 1700, 4700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                                            borderColor: "green",
+                                            fill: false
+                                        }, {
+                                            data: [300, 1800, 900, 5000, 6000, 400, 2000, 1000, 200, 100],
+                                            borderColor: "blue",
+                                            fill: false
+                                        }]
+                                    },
+                                    options: {
+                                        legend: { display: false }
+                                    }
+                                });
+
+                            </script>
+
+
+                        </div>
+                        <div class="card5">
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                            <canvas id="myChart1" max-width="100%" height="270px"></canvas>
+
+                                <script>
+                                    var xValues = ["Italy", "France", "japan", "canada"];
+                                    var yValues = [4260, 3970, 4260, 3970];
+                                    var barColors = [
+                                        "#b91d47",
+                                        "#00aba9",
+                                        "#2b5797",
+                                        "#e8c3b9",
+                                        "#1e7145"
+                                    ];
+
+                                    new Chart("myChart1", {
+                                        type: "doughnut",
+                                        data: {
+                                            labels: xValues,
+                                            datasets: [{
+                                                backgroundColor: barColors,
+                                                data: yValues
+                                            }]
+                                        },
+                                        options: {
+                                            title: {
+                                                display: true,
+                                                text: "Sales distribution"
+                                            }
+                                        }
+                                    });
+                                </script>
+                        </div>
+                    </div>
+                    <div class="card6">
+                        <h3>Referrer</h3>
+                        <table>
+                            <tr>
+                                <th>Location</th>
+                                <th>Views</th>
+                                <th>Sales</th>
+                                <th>conversion</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td>Google.com</td>
+                                <td>3745</td>
+                                <td>454</td>
+                                <td>43%</td>
+                                <td>$19,245</td>
+                            </tr>
+                            <tr>
+                                <td>Facebook.com</td>
+                                <td>8126</td>
+                                <td>727</td>
+                                <td>32%</td>
+                                <td>$17,638</td>
+                            </tr>
+                            <tr>
+                                <td>Twitter.com</td>
+                                <td>8836</td>
+                                <td>694</td>
+                                <td>28%</td>
+                                <td>$16,255</td>
+                            </tr>
+                            <tr>
+                                <td>Direct,email,IM</td>
+                                <td>1173</td>
+                                <td>645</td>
+                                <td>24%</td>
+                                <td>$14,324</td>
+                            </tr>
+                            <tr>
+                                <td>linkedin.com</td>
+                                <td>2739</td>
+                                <td>539</td>
+                                <td>35%</td>
+                                <td>$12,658</td>
+                            </tr>
+                            <tr>
+                                <td>instagram.com</td>
+                                <td>2739</td>
+                                <td>345</td>
+                                <td>20%</td>
+                                <td>$13,638</td>
+                            </tr>
+                        </table>
+                        <a href="#">Show more</a>
+                    </div>
+                </dic>
+
+                <dic class="card2">
+                    <div class="card7">
+                        <nav>
+                            <img src="images/Avatar@2x.png" alt="">
+                            <h5>Nick Herasimenka</h5>
+                            <h6>United states</h6>
+                            <div>
+                                <img src="images/twitter-24.png" width="15px" class="images" alt="">
+                                <img src="images/pngkit_facebook-like-png_100309.png" width="15px" class="images"
+                                    alt="">
+                                <img src="images/pngaaa.com-158434.png" width="15px" class="images" alt="">
+                                <img src="images/WhatsApp Logo Vector (_EPS) Free Download.png" width="15px"
+                                    class="images" alt="">
+                            </div>
+                        </nav>
+                        <div class="separate">
+                            <p>Our Users</p>
+                            <img src="images/options.svg" alt="">
+                        </div>
+                        <div class="ids">
+                            <div class="ones">
+                                <img src="images/profile-pic-03.jpg" width="30px" alt="" class="image">
+                                <p>Drew James<br><span style="color: gray;">Unites states</span></p>
+                            </div>
+                            <p><br>Mobile:9791567311</p>
+                        </div>
+                        <div class="ids">
+                            <div class="ones">
+                                <img src="images/profile-pic-04.jpg" width="30px" alt="" class="image">
+                                <p>Bavid kames<br><span style="color: gray;">Unites states</span></p>
+                            </div>
+                            <p><br>Mobile:9578745076</p>
+                        </div>
+                        <div class="ids">
+                            <div class="ones">
+                                <img src="images/profile-pic-02.jpg" width="30px" alt="" class="image">
+                                <p>Lavid emes<br><span style="color: gray;">Unites states</span></p>
+                            </div>
+                            <p><br>Mobile:9363025166</p>
+                        </div>
+
+                    </div>
+                    <div class="card8">
+                        <nav>
+                            <p>Product video</p>
+                            <img src="images/options.svg" alt="">
+                        </nav>
+                        <img src="images/thumbnail.png" alt="">
+                    </div>
+            </div>
+        </main>
+    </div>
+    </div>
+    <script>
+        function toggle() {
+            navSize = document.getElementById("sideBar").style.width;
+            if (navSize == "250px") {
+                return close();
+            }
+            return open();
+        }
+        function open() {
+            document.getElementById("sideBar").style.width = "250px";
+            document.getElementById("cont").style.marginLeft = "250px";
+        }
+
+        function close() {
+            document.getElementById("sideBar").style.width = "0";
+            document.getElementById("cont").style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+
+</html>
